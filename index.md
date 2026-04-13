@@ -1,5 +1,7 @@
 ---
 layout: default
+og_title: "Siddhant Tiwary - Software Engineer & AI Systems Architect"
+og_description: "Software engineer specializing in AI systems, app development, and backend architecture."
 ---
 
 <header id="about" class="hero">

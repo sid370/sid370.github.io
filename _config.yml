@@ -1,0 +1,31 @@
+title: Siddhant Tiwary
+description: Software engineer building platforms, data systems, and AI-adjacent products.
+url: https://siddhanttiwary.xyz
+markdown: kramdown
+permalink: pretty
+
+author:
+  name: Siddhant Tiwary
+  email: siddhanttiwary30@gmail.com
+
+# Use social_links (not "social") so Jekyll/GitHub Pages does not drop the list.
+# Set url to "" for a muted placeholder icon — see _includes/connect-social.html.
+social_links:
+  - icon: github
+    label: GitHub
+    url: https://github.com/sid370
+  - icon: linkedin
+    label: LinkedIn
+    url: "https://www.linkedin.com/in/siddhanttiwary/"
+  - icon: x
+    label: X
+    url: "https://x.com/tiwary_siddhant"
+  - icon: instagram
+    label: Instagram
+    url: "https://www.instagram.com/tiwarysiddhant/"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

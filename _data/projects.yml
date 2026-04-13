@@ -1,0 +1,14 @@
+# GitHub URLs align with resume project links / your public repos.
+- title: Blockchain-based file storage
+  period: Feb 2021 – Apr 2021
+  github: https://github.com/sid370/File-Sharding
+  points:
+    - Public-ledger split-file sharder; file recovery via a one-time UUID.
+    - Erasure-coded segments with Merkle-root verification.
+
+- title: YouTube Comment Analyzer
+  period: Nov 2020 – Dec 2020
+  github: https://github.com/sid370/YouTube-Comment-Flagger
+  points:
+    - Browser extension to flag and analyze comments using semantic sentiment signals.
+    - Aimed at faster moderation workflows.

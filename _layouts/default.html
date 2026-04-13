@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <title>{% if page.url == '/' %}{{ site.title }}{% elsif page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="side-nav" aria-label="Primary">
+    <div class="side-nav-track">
+      <a class="side-nav-link active" href="#about" data-section="about">
+        <span class="side-nav-indicator"></span>
+        <span class="side-nav-label">About Me</span>
+      </a>
+      <a class="side-nav-link" href="#experience" data-section="experience">
+        <span class="side-nav-indicator"></span>
+        <span class="side-nav-label">Experience</span>
+      </a>
+      <a class="side-nav-link" href="#projects" data-section="projects">
+        <span class="side-nav-indicator"></span>
+        <span class="side-nav-label">Projects</span>
+      </a>
+      <a class="side-nav-link" href="#connect" data-section="connect">
+        <span class="side-nav-indicator"></span>
+        <span class="side-nav-label">Connect</span>
+      </a>
+    </div>
+  </nav>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+  </footer>
+
+  <script>
+  (function () {
+    const links = document.querySelectorAll('.side-nav-link');
+    const ids = Array.from(links).map(l => l.dataset.section);
+    const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+    function update() {
+      const scrollY = window.scrollY + window.innerHeight * 0.35;
+      let current = ids[0];
+      for (const sec of sections) {
+        if (sec.offsetTop <= scrollY) current = sec.id;
+      }
+      links.forEach(l => l.classList.toggle('active', l.dataset.section === current));
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
+</body>
+</html>

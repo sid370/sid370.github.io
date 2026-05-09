@@ -89,6 +89,27 @@ og_description: "Software engineer specializing in AI systems, app development, 
   </div>
 </section>
 
+<section id="blogs" class="page-section" aria-labelledby="blogs-heading">
+  <div class="section-head">
+    <h2 id="blogs-heading">Blogs</h2>
+    <p class="section-kicker">Writing</p>
+  </div>
+  <div class="section-stack">
+    {% for b in site.data.blogs %}
+    <article class="card card--compact blog-card">
+      <header class="card-head">
+        <div class="card-head-text">
+          <h3 class="card-title">
+            <a href="{{ b.url }}" target="_blank" rel="noopener noreferrer">{{ b.title }}</a>
+          </h3>
+          <p class="card-meta">{{ b.publication }}</p>
+        </div>
+      </header>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
 <section id="education" class="page-section" aria-labelledby="education-heading">
   <div class="section-head">
     <h2 id="education-heading">Education</h2>

@@ -237,7 +237,8 @@ main {
   padding: 1.35rem 1.5rem 1.4rem;
 }
 
-.project-card::before {
+.project-card::before,
+.blog-card::before {
   content: "";
   position: absolute;
   left: 0;
@@ -247,6 +248,21 @@ main {
   border-radius: var(--radius) 0 0 var(--radius);
   background: linear-gradient(180deg, var(--accent), var(--accent-violet));
   opacity: 0.95;
+}
+
+.blog-card .card-head {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.blog-card .card-title a {
+  color: var(--text);
+  border-bottom: none;
+}
+
+.blog-card .card-title a:hover {
+  color: var(--accent);
 }
 
 .card--compact {

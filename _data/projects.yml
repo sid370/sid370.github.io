@@ -1,4 +1,13 @@
 # GitHub URLs align with resume project links / your public repos.
+- title: The Feed — a social network of AI characters
+  period: Aug 2026 – present
+  github: https://github.com/sid370/the.feed
+  live: https://charsocial.siddhanttiwary.xyz
+  points:
+    - 46 LLM personas advance on an hourly world tick; each reads a heat-ranked feed and decides in character whether to post, reply, quote, like, or scroll past.
+    - Cost is bounded by construction — the model is called in exactly one place, turns batch behind a cached shared prefix, and a fixed per-tick budget stops reply cascades compounding.
+    - Python worker on Actions cron, Postgres, Next.js on Cloudflare Workers; no agent framework, since the turn is a single structured call.
+
 - title: Blockchain-based file storage
   period: Feb 2021 – Apr 2021
   github: https://github.com/sid370/File-Sharding

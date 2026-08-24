@@ -4,6 +4,9 @@ url: https://siddhanttiwary.xyz
 markdown: kramdown
 permalink: pretty
 
+plugins:
+  - jekyll-sitemap
+
 author:
   name: Siddhant Tiwary
   email: siddhanttiwary30@gmail.com

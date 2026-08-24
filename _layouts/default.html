@@ -3,14 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ page.description | default: site.description | escape }}">
-  <meta property="og:title" content="{{ page.og_title | default: page.title | default: site.title | escape }}">
-  <meta property="og:description" content="{{ page.og_description | default: page.description | default: site.description | escape }}">
-  <meta property="og:type" content="website">
-  <title>{% if page.url == '/' %}{{ site.title }}{% elsif page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {%- assign page_title = page.og_title | default: page.title | default: site.title -%}
+  {%- assign page_desc = page.og_description | default: page.description | default: site.description -%}
+  {%- assign canonical = page.url | replace: 'index.html', '' | absolute_url -%}
+  {%- assign profiles = site.social_links | where_exp: "s", "s.url != ''" | map: "url" -%}
+  <meta name="description" content="{{ page_desc | escape }}">
+  <meta name="author" content="{{ site.author.name | escape }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:description" content="{{ page_desc | escape }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page_title | escape }}">
+  <meta name="twitter:description" content="{{ page_desc | escape }}">
+  <title>{% if page.url == '/' %}{{ page_title }}{% elsif page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="bQA8HafBsPmvA5NiJ5WZ6Q" async></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "{{ '/#siddhant' | absolute_url }}",
+    "name": {{ site.author.name | jsonify }},
+    "alternateName": "Sid",
+    "url": {{ site.url | jsonify }},
+    "email": "mailto:{{ site.author.email }}",
+    "jobTitle": "Senior Software Engineer",
+    "description": {{ site.description | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Vellore Institute of Technology",
+      "url": "https://vit.ac.in/"
+    },
+    "knowsAbout": [
+      "Distributed systems",
+      "Backend architecture",
+      "Kubernetes",
+      "LLM orchestration",
+      "Agentic AI systems",
+      "Data engineering"
+    ],
+    "sameAs": {{ profiles | jsonify }}
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>

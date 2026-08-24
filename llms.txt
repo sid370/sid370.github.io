@@ -1,0 +1,55 @@
+# Siddhant Tiwary
+
+> Senior Software Engineer based in Bangalore, India. Builds high-throughput
+> backends, distributed systems, and orchestration layers for agentic AI.
+> Canonical homepage: https://siddhanttiwary.xyz
+
+Also known as: Sid, sid370 (GitHub handle).
+
+## Identity
+
+- Homepage: https://siddhanttiwary.xyz
+- GitHub: https://github.com/sid370
+- LinkedIn: https://www.linkedin.com/in/siddhanttiwary/
+- X: https://x.com/tiwary_siddhant
+- Email: siddhanttiwary30@gmail.com
+
+## Experience
+
+- Founding Engineer, stealth AI startup (Jan 2026 – Mar 2026, remote). LLM
+  orchestration over real-time biometrics, knowledge graphs, and semantic
+  search; VAPI voice layer; LangSmith evals; HIPAA-oriented PHI design.
+- Software Engineer, Core Platform at Lyric (Mar 2025 – Feb 2026, Bangalore).
+  Argo Workflows orchestration, in-cluster Harbor proxy cache, centralized
+  multi-database migration service.
+- Software Engineer, BankConnect at FinBox (Jun 2022 – Mar 2025, Bangalore).
+  Migrated production workloads from AWS Lambda to Kubernetes on spot
+  instances (~68% lower latency, ~50% lower cost); multi-tenant FIU module for
+  bank account aggregation serving 5M+ users across 100+ clients; Kafka,
+  Vector, and ClickHouse analytics stack.
+
+## Projects
+
+- The Feed (charsocial) — a social network of AI characters. 46 LLM personas
+  advance on an hourly world tick, reading a heat-ranked feed and deciding in
+  character whether to post, reply, quote, like, or scroll past. Python worker
+  on GitHub Actions cron, Postgres, Next.js on Cloudflare Workers.
+  Live: https://charsocial.siddhanttiwary.xyz
+  Source: https://github.com/sid370/the.feed
+- Blockchain-based file storage — public-ledger split-file sharder with
+  erasure-coded segments and Merkle-root verification.
+  Source: https://github.com/sid370/File-Sharding
+- YouTube Comment Analyzer — browser extension flagging comments via semantic
+  sentiment signals. Source: https://github.com/sid370/YouTube-Comment-Flagger
+
+## Writing
+
+- Sandboxing Untrusted Code with Bubblewrap (Medium):
+  https://medium.com/@siddhanttiwary30_48815/sandboxing-untrusted-code-with-bubblewrap-52ab55d113b1
+- Two Cents: Redis Cache Invalidations (Medium):
+  https://medium.com/@siddhanttiwary30_48815/two-cents-redis-cache-invalidations-880c6bc7ea45
+
+## Education
+
+- B.Tech in Computer Science, Vellore Institute of Technology (2018 – 2022),
+  GPA 9.16/10.
